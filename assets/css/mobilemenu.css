@@ -1,0 +1,52 @@
+body.over { overflow: hidden;}
+/* mobile menu css */
+.mobile-menu {position:fixed; top:140px; width:100%; z-index:99; background:#ed5099; height:calc(100vh - 140px); overflow:auto; border-top:1px solid #ed5099; transform:translateY(-100%); opacity:0; pointer-events:none; transition:transform 0.5s ease, opacity 0.4s ease;}
+.mobile-menu.slow {transform:translateY(0); opacity:1; pointer-events:auto;}
+.m-menu img {width:20px;}
+.mobile-menu .mob-main {float:left; width:100%;}
+.mobile-menu .logo {float:left; padding:20px; width:100%;}
+.mobile-menu .logo img {float:left; background:#ffffff;}
+.mobile-menu .nav {width:100%; background:#fff; float:left; padding:0 0 75px 0; height:100%;}
+
+.m-menu { float: right; z-index: 9999; position: relative; right: 0; display:none; width: 30px; height: 22px; top:0px; margin: 0px 0 0 0; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer;}
+.m-menu a { display: block;}
+.m-menu span { display: block; position: absolute; height: 3px; width: 100%; background: #ed5099;; border-radius: 3px; opacity: 1; left: 0; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);  -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; }  
+.m-menu:hover span { background:#ed5099;}
+.m-menu span:nth-child(1) { top: 0px; -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; transform-origin: left center; }
+.m-menu span:nth-child(2) { top: 9px; -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; transform-origin: left center; }
+.m-menu span:nth-child(3) { top: 18px; -webkit-transform-origin: left center; -moz-transform-origin: left center; -o-transform-origin: left center; transform-origin: left center; }
+.m-menu.open span:nth-child(1) { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); top: 0px; left: 4px; background: #ed5099;}
+.m-menu.open span:nth-child(2) { width: 0%; opacity: 0;}
+.m-menu.open span:nth-child(3) { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); top: 21px; left: 4px; background: #ed5099; }
+
+#accordian { width: 100%; margin:0; padding:40px 50px; background: #ed5099;float: left;overflow-y: scroll;height: calc(100% - 94px);}     
+#accordian ul li a { width: fit-content;margin: 0 auto; padding: 0 0px; font-size: 25px; line-height: 30px; display: block; color: #fff;  text-decoration: none; position: relative;font-family: "Zilla Slab", serif; text-transform: uppercase;}
+#accordian ul li a:after{position: absolute;left: 0;right: 0;bottom: 0;width: 0;height: 2px;background-color: var(--clr-bg-header);content: "";transition: width 0.3s;margin: 0 auto;}
+#accordian ul li a:hover:after{width: 100%;} 
+#accordian ul li a.active{font-family: "Zilla Slab", serif; font-weight: 900;}
+#accordian ul li span { width: fit-content; margin: 0 auto; display: flex; justify-content: center; align-items: center; position: relative; padding: 0px 0;column-gap: 10px;}
+#accordian ul li span a:after{display: none;}
+#accordian li { list-style-type: none;  padding-bottom: 25px; text-align: center; }  
+#accordian ul ul li a {font-family: "Zilla Slab", serif; font-weight: 500;  color: #fff; text-decoration: none; font-size: 20px; line-height: 24px; display: block; padding: 0px 0; transition: all 0.15s;position: relative; width: fit-content;}
+#accordian ul ul li { border: none; padding: 8px 0;text-align: center;} 
+#accordian ul ul li a{width: fit-content;margin: 0 auto; text-align: center;}
+#accordian ul ul li:last-child{padding: 8px 0 !important;}
+#accordian ul ul { display: none; padding-left: 10px; padding-top: 10px;margin-bottom: 0;} 
+#accordian li.active > span a {font-family: "Zilla Slab", serif; font-weight: 900;}
+#accordian li.active i{transform: rotate(180deg);}
+#accordian ul li i {font-size: 20px;cursor: pointer;color: #fff;transition: all .5s ease;}
+#accordian ul li span a:hover{opacity: 1;}
+
+.mob-btm-lnk {position: fixed;width: 100%;bottom: 0;padding: 25px 0;border-top: 2px solid #fff;}
+.mob-scl-lnks{width: 100%;display: flex;justify-content: center;margin-top: 12px;align-items: center;}  
+.mob-scl-lnks { width: auto; display: flex; flex-wrap: wrap; column-gap: 15px; align-items: center;}
+.mob-scl-lnks li { flex: 0 1 auto; padding-left: 0; margin-bottom: 0;}
+.mob-scl-lnks li a { width: auto; transition:all .5s ease; display: inline-flex;background: #fff;width: 30px; height: 30px; border-radius: 25px;display: flex;align-items: center;justify-content: center;}
+.mob-scl-lnks li a i{color: #ed5099;font-size: 20px;transition: all .5s ease;}
+.mob-scl-lnks li a:hover i{color: #43b6ee;}
+
+body.mobile-menu-open .logo{margin-bottom: 0;}
+body.mobile-menu-open .logo , body.mobile-menu-open .is-sticky .logo img , body.mobile-menu-open .logo img{width: 150px;}
+body.mobile-menu-open .is-sticky .logo img{width: 150px;}
+body.mobile-menu-open .menu .ddsmoothmenu{padding: 10px 0;}
+
